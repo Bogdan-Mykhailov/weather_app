@@ -3,12 +3,9 @@ import {AsyncPaginate} from "react-select-async-paginate";
 import {geoApi, ObjectType} from "../../03-dal/weather-api";
 import {OptionsOrGroups} from "react-select";
 
-type SearchPropsType = {
-  onSearchChange: (searchData: string) => void
-}
-
-export const Search: React.FC<SearchPropsType> = ({onSearchChange}) => {
-
+export const Search: React.FC<SearchPropsType> = (
+  {onSearchChange}
+) => {
 
   const [search, setSearch] = useState(null)
 
@@ -17,7 +14,7 @@ export const Search: React.FC<SearchPropsType> = ({onSearchChange}) => {
     onSearchChange(searchData)
   }
 
- const loadOptions = (inputValue: string, options: OptionsOrGroups<ObjectType, any>)=> {
+  const loadOptions = (inputValue: string, options: OptionsOrGroups<ObjectType, any>) => {
     return geoApi.options(inputValue, options)
       .then((res) => {
         return {
@@ -29,9 +26,6 @@ export const Search: React.FC<SearchPropsType> = ({onSearchChange}) => {
           })
         }
       })
-      // .catch((err) => {
-      //   return 'error'
-      // })
   }
 
   return (
@@ -46,3 +40,8 @@ export const Search: React.FC<SearchPropsType> = ({onSearchChange}) => {
     </div>
   );
 };
+
+//types
+type SearchPropsType = {
+  onSearchChange: (searchData: string) => void
+}
