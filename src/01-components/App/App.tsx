@@ -1,35 +1,13 @@
 import React, {useState} from 'react';
 import s from './App.module.css';
 import {Search} from "../01-Search/Search";
-import {CurrentWeather} from "../02-Current-weather/CurrentWeather";
+import {CurrentWeather, CurrentWeatherDataType} from "../02-Current-weather/CurrentWeather";
 import {WEATHER_API_KEY, WEATHER_API_URL} from "../../03-dal/weather-api";
-
-export type CurrentWeatherType = {
-  base: string
-  city: string
-  clouds: {all: number}
-  cod: number
-  coord: {lon: number, lat: number}
-  dt: number
-  id: number
-  main: {feels_like: number
-    humidity: number
-    pressure: number
-    temp: number
-    temp_max: number
-    temp_min: number}
-  name: string
-  sys: {type: number, id: number, country: string, sunrise: number, sunset: number}
-  timezone: number
-  visibility: number
-  weather: [{id: number, main: string, description: string, icon: string}]
-  wind: {speed: number, deg: number, gust: number}
-}
 
 export const App = () => {
 
-  const [currentWeather, setCurrentWeather] = useState<CurrentWeatherType>()
-  const [forecast, setForecast] = useState<CurrentWeatherType>()
+  const [currentWeather, setCurrentWeather] = useState<CurrentWeatherDataType>()
+  const [forecast, setForecast] = useState<CurrentWeatherDataType>()
 
   const handleOnSearchChange = (searchData: any) => {
     const [lat, lon] = searchData.value.split(' ')

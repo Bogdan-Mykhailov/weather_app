@@ -1,9 +1,30 @@
 import React from 'react';
 import s from './CurrentWeather.module.css'
-import {CurrentWeatherType} from "../App/App";
+
+export type CurrentWeatherDataType = {
+  base: string
+  city: string
+  clouds: {all: number}
+  cod: number
+  coord: {lon: number, lat: number}
+  dt: number
+  id: number
+  main: {feels_like: number
+    humidity: number
+    pressure: number
+    temp: number
+    temp_max: number
+    temp_min: number}
+  name: string
+  sys: {type: number, id: number, country: string, sunrise: number, sunset: number}
+  timezone: number
+  visibility: number
+  weather: [{id: number, main: string, description: string, icon: string}]
+  wind: {speed: number, deg: number, gust: number}
+}
 
 type CurrentWeatherPropsType = {
-  data: CurrentWeatherType
+  data: CurrentWeatherDataType
 }
 
 export const CurrentWeather: React.FC<CurrentWeatherPropsType> = ({data}) => {
