@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import {AsyncPaginate} from "react-select-async-paginate";
-import {geoApi, ObjectType} from "../../03-dal/weather-api";
+import {geoApi, ObjectType} from "../../02-dal/weather-api";
 import {OptionsOrGroups} from "react-select";
 
 export const Search: React.FC<SearchPropsType> = (

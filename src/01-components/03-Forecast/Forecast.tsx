@@ -45,8 +45,7 @@ export const Forecast: React.FC<ForecastPropsType> = (
                   <label className={s.day}>{forecastDays[idx]}</label>
                   <label className={s.description}>{item.weather[0].description}</label>
                   <label className={s.minMax}>
-                    {Math.round(item.main.temp_min)} /
-                    {Math.round(item.main.temp_max)}°C
+                    {Math.round(item.main.temp_min)} / {Math.round(item.main.temp_max)}°C
                   </label>
                 </div>
               </AccordionItemButton>

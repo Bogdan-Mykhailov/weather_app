@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import s from './App.module.css';
 import {Search} from "../01-Search/Search";
 import {CurrentWeather, CurrentWeatherDataType} from "../02-Current-weather/CurrentWeather";
-import {WEATHER_API_KEY, WEATHER_API_URL} from "../../03-dal/weather-api";
+import {WEATHER_API_KEY, WEATHER_API_URL} from "../../02-dal/weather-api";
 import {Forecast, ForecastDataType} from "../03-Forecast/Forecast";
 
 export const App = () => {
