@@ -45,7 +45,6 @@
 .details {
   width: 100%;
   padding-left: 20px;
-
 }
 
 .parameterRow {
@@ -59,9 +58,11 @@
   font-size: 12px;
 }
 
-/*.parameterLabel.top {*/
-/*  border-bottom: 1px solid white;*/
-/*}*/
+.parameterLabel.top {
+  /*border-bottom: 1px solid white;*/
+  font-weight: 600;
+  font-size: 15px;
+}
 
 .parameterValue {
   text-align: right;

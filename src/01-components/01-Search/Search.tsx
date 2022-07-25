@@ -23,7 +23,7 @@ export const Search: React.FC<SearchPropsType> = ({onSearchChange}) => {
         return {
           options: res.data.data.map((city) => {
             return {
-              value: `${city.longitude} ${city.latitude}`,
+              value: `${city.latitude} ${city.longitude}`,
               label: `${city.name}, ${city.countryCode}`,
             }
           })

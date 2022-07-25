@@ -1,4 +1,7 @@
-import axios, { AxiosResponse } from "axios";
+import axios from "axios";
+
+export const WEATHER_API_KEY = 'fe98cb9015f5be993c52985c53ac4efc';
+export const WEATHER_API_URL = `https://api.openweathermap.org/data/2.5/`
 
 const instance = axios.create({
   baseURL: 'https://wft-geo-db.p.rapidapi.com/v1/geo/',
