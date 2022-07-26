@@ -3,7 +3,10 @@ body {
   font-family: 'Roboto', Arial !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #d5d4d4;
+  background-image: url("./assets/Majestic-4.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 code {

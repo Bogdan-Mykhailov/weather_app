@@ -5,7 +5,7 @@
 }
 
 .dailyItem {
-  background-color: #f5f5f5;
+  background: rgba(0, 0, 0, 0.30);
   border-radius: 15px;
   height: 40px;
   margin: 5px;
@@ -21,7 +21,7 @@
 }
 
 .day {
-  color: #212121;
+  color: #ffffff;
   flex: 1 1;
   font-weight: 600;
   margin-left: 15px;
@@ -31,10 +31,11 @@
   flex: 1 1;
   margin-right: 15px;
   text-align: right;
+  color: seashell;
 }
 
 .minMax {
-  color: #757575;
+  color: #ffffff;
 }
 
 .dailyDetailsGrid {
@@ -46,6 +47,8 @@
   flex: 1 1;
   grid-template-columns: auto auto;
   padding: 5px 15px;
+  background: rgba(0, 0, 0, 0.20);
+  border-radius: 20px;
 }
 
 .dailyDetailsGridItem {
@@ -56,10 +59,10 @@
 }
 
 .dailyDetailsGrid label:first-child {
-  color: #757575;
+  color: #ffffff;
 }
 
 .dailyDetailsGrid label:last-child {
-  color: #212121;
+  color: #ffffff;
 }
 

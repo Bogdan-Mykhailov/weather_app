@@ -28,7 +28,7 @@ export const CurrentWeather: React.FC<CurrentWeatherPropsType> = (
         <p className={s.temperature}>{Math.round(data.main.temp)}°C</p>
         <div className={s.details}>
           <div className={s.parameterRow}>
-            <span className={`${s.parameterLabel} ${s.top}`}>Details</span>
+            {/*<span className={`${s.parameterLabel} ${s.top}`}>Details</span>*/}
           </div>
           <div className={s.parameterRow}>
             <span className={s.parameterLabel}>Feels like</span>
