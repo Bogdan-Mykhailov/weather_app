@@ -1,5 +1,6 @@
 import React from 'react';
 import s from './CurrentWeather.module.css'
+import sun from './../../../public/icons/01d.png'
 
 export const CurrentWeather: React.FC<CurrentWeatherPropsType> = (
   {data}
