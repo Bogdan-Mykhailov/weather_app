@@ -33,7 +33,6 @@ export const Forecast: React.FC<ForecastPropsType> = (
   );
 
   return (
-
     <>
       <label className={s.title}>Daily</label>
       <Accordion allowZeroExpanded>
