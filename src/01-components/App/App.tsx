@@ -30,9 +30,9 @@ export const App = () => {
 
   return (
     <div className={s.app}>
-      <Search onSearchChange={handleOnSearchChange}/>
+      {/*<Search onSearchChange={handleOnSearchChange}/>*/}
       {currentWeather && <CurrentWeather data={currentWeather}/>}
-      {forecast && <Forecast data={forecast}/>}
+      {/*{forecast && <Forecast data={forecast}/>}*/}
     </div>
   )
 };

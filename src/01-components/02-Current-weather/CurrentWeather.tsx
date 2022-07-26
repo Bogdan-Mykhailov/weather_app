@@ -1,12 +1,18 @@
 import React from 'react';
 import s from './CurrentWeather.module.css'
 
+
 export const CurrentWeather: React.FC<CurrentWeatherPropsType> = (
   {data}
 ) => {
 
   return (
-    <div className={s.weather}>
+    <div className={s.weather} style={{
+      backgroundImage: 'url(' + `icons/img/${data.weather[0].icon}.png` + ')',
+      backgroundPosition: 'center',
+      backgroundSize: 'cover',
+      backgroundRepeat: 'no-repeat'
+    }}>
       <div className={s.top}>
         <div>
           <p className={s.city}>{data.city}</p>

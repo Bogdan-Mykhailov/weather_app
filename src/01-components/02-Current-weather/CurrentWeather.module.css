@@ -1,15 +1,22 @@
 .weather {
-  width: 300px;
+  max-width: 800px;
+  height: 360px;
   border-radius: 6px;
   box-shadow: 10px -2px 20px 2px rgb(0 0 0 / 30%);
-  color: #fff;
-  background-color: #333;
+  color: white;
+  /*-webkit-text-stroke: 0.6px slategray;*/
   margin: 20px auto 0 auto;
-  padding: 0 20px 20px 20px;
+  padding: 20px 20px 40px 20px;
 }
 
-.top,
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .bottom {
+  margin-top: 60px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -17,7 +24,7 @@
 
 .city {
   font-weight: 600;
-  font-size: 18px;
+  font-size: 30px;
   line-height: 1;
   margin: 0;
   letter-spacing: 1px;
@@ -25,47 +32,55 @@
 
 .weatherDescription {
   font-weight: 400;
-  font-size: 14px;
+  font-size: 24px;
   line-height: 1;
   margin: 0;
 }
 
 .weatherIcons {
-  width: 100px;
+  width: 150px;
 }
 
 .temperature {
   font-weight: 600;
-  font-size: 70px;
+  font-size: 120px;
   width: auto;
   letter-spacing: -5px;
   margin: 10px 0;
 }
 
 .details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 100%;
   padding-left: 20px;
+  background: rgba(0, 0, 0, 0.11);
 }
 
 .parameterRow {
   display: flex;
   justify-content: space-between;
+  width: 300px;
 }
 
 .parameterLabel {
   text-align: left;
-  font-weight: 400;
-  font-size: 12px;
+  font-weight: bold;
+  font-size: 25px;
+  width: 250px;
 }
 
 .parameterLabel.top {
-  /*border-bottom: 1px solid white;*/
+  width: 300px;
+  border-bottom: 1px solid white;
   font-weight: 600;
-  font-size: 15px;
+  font-size: 30px;
 }
 
 .parameterValue {
   text-align: right;
-  font-weight: 600;
-  font-size: 12px;
+  font-weight: bold;
+  font-size: 25px;
+  width: 250px;
 }
