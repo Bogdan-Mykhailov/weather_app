@@ -16,13 +16,15 @@ export const CurrentWeather: React.FC<CurrentWeatherPropsType> = (
       <div className={s.top}>
         <div>
           <p className={s.city}>{data.city}</p>
-          <p className={s.weatherDescription}>{data.weather[0].description}</p>
+          <p className={s.weatherDescription}>{data.weather[0].description}
+            <img
+              src={`icons/${data.weather[0].icon}.png`}
+              alt="sunny"
+              className={s.weatherIcons}
+            />
+          </p>
+
         </div>
-        <img
-          src={`icons/${data.weather[0].icon}.png`}
-          alt="sunny"
-          className={s.weatherIcons}
-        />
       </div>
       <div className={s.bottom}>
         <p className={s.temperature}>{Math.round(data.main.temp)}°C</p>
