@@ -1,11 +1,22 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import s from './App.module.css';
 import {Search} from "../01-Search/Search";
 import {CurrentWeather, CurrentWeatherDataType} from "../02-Current-weather/CurrentWeather";
 import {WEATHER_API_KEY, WEATHER_API_URL} from "../../03-dal/weather-api";
 import {Forecast, ForecastDataType} from "../03-Forecast/Forecast";
+import {useDispatch} from "react-redux";
+import {setCurrentWeatherAC} from "../../02-bll/appReducer";
+import {useTypedSelector} from "../../02-bll/store";
 
 export const App = () => {
+
+  // const dispatch = useDispatch()
+  // const currentWeather = useTypedSelector(state => state.app.currentWeather)
+
+  useEffect(() => {
+
+  }, [])
+
 
   const [currentWeather, setCurrentWeather] = useState<CurrentWeatherDataType>()
   const [forecast, setForecast] = useState<ForecastDataType>()
@@ -23,6 +34,7 @@ export const App = () => {
         const forecastResponse = await res[1].json()
 
         setCurrentWeather({city: searchData.label, ...weatherResponse})
+        // dispatch(setCurrentWeatherAC({city: searchData.label, ...weatherResponse}))
         setForecast({city: searchData.label, ...forecastResponse})
       })
       .catch((err) => console.log(err))
